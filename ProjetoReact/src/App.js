@@ -3,6 +3,7 @@ import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomePage from './screens/HomePage/index';
+import List from './screens/List';
 function HomeScreen() {
   return (
     <View
@@ -53,6 +54,7 @@ const App = () => {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="HomePage" component={HomeScreen} />
+        <Stack.Screen name="List" component={List} />
       </Stack.Navigator>
     </NavigationContainer>
   );

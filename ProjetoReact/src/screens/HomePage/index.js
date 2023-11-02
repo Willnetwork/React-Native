@@ -1,19 +1,16 @@
 import * as React from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import {Container, Title, Button, TextButton} from './styles'
 
-const HomePage = (navigation) => {
-  return (
-<View
-    style={{
-      flex: 1,
-      backgroundColor: '#ffffff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}>
-        <text style={{fontSize: 28, fontWeight: 'bold', color:'#000000'}}>
-            Chegamos na outra tela.</text>
-    </View>
-  );
+const HomePage = ({navigation}) => {
+return (
+  <Container>
+      <Title>Chegamos na outra tela.</Title>
+      <button onPress={() => { navigation.navigate ('List'); }}>
+        <TextButton>Click Aqui!</TextButton>
+      </button>
+</Container>
+);
 }
 
 export default HomePage;
